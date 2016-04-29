@@ -1,0 +1,119 @@
+@color1: lightblue;
+@color2: white;
+.maginFirst (@x: 0, @y: auto) {
+	margin: @x @y;
+}
+.text (@x: center) {
+	text-align: @x;
+}
+.heightWidth (@height, @width) {
+	height: @height;
+	width: @width;
+}
+.font (@size, @lineHight) {
+	font-size: @size;
+	line-height: @lineHight;
+}
+.icon (@x: antialiased, @y: 0.2px, @z: grayscale) {
+	-webkit-font-smoothing: @x;
+    -webkit-text-stroke-width: @y;
+    -moz-osx-font-smoothing: @z;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style-type: none;
+}
+#container {
+	.heightWidth (450px, 550px);
+	.maginFirst ();
+}
+#forecast {
+	.maginFirst ();
+	.heightWidth (450px, 550px);
+	background-color: @color1;
+}
+.dayCurrent {
+	color: @color2;
+	.font (35px, 100px);
+	.maginFirst ();
+	.text ();
+}
+#weatherContainer {
+	.heightWidth (100px, 350px);
+	.maginFirst ();
+	margin-bottom: 30px;
+} 
+.mainIcon {
+	font-family:"iconfont" !important;
+	.font (80px, 100px);
+	font-style:normal;
+	color: @color2;
+	float: left;
+	.icon ();
+}
+#tempContainer {
+	.heightWidth (100px, 200px);
+	float: right;
+}
+.temp {
+	color: @color2;
+	.font (25px, 30px);
+}
+.littleContainer {
+	.heightWidth (100px, 145px);
+	margin-left: 25px;
+	float: left;
+}
+.iconfont{
+	font-family:"iconfont" !important;
+	.font (40px, 50px);
+	font-style:normal;
+	color: @color2;
+	.maginFirst ();
+	margin-left: 20px;
+	.text ();
+	.icon ();
+}
+	
+.p {
+	color: @color2;
+	.font (15px, 15px);
+	margin-left: 25px;
+}
+.current {
+	color: @color2;
+	.font (30px, 40px);
+	margin-left: 20px;
+}
+.control {
+	margin-top: 200px;
+	margin-left: 170px;
+	li {
+		color: @color2;
+	    background: @color2;
+	    float: left;
+	    .heightWidth (10px, 10px);
+	    margin-right: 10px;
+	    overflow: hidden;
+	    opacity: 0.5;
+	    
+	    border-radius: 50%;
+	    .liCurrent {
+		    color: @color2;
+		    opacity: 1;
+		    
+		}
+	}
+}
+@font-face {
+	font-family: 'iconfont';
+    src: url('../icon/iconfont.eot'); /* IE9*/
+    src: url('../icon/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../icon/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../icon/iconfont.ttf') format('truetype'), 
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    url('../icon/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
