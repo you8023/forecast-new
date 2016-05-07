@@ -40,7 +40,6 @@ function autoPlay () {
 		index++;
 		index >= 7 && (index = 0);
 		show(index);
-		
 	},4500);
 }
 autoPlay();//应用
@@ -60,6 +59,7 @@ if (req != null) {
 }
 //数据切换
 function show (a) {
+	
 	index = a;
 	var alpha = 0;
 	var data = JSON.parse(req.responseText);
